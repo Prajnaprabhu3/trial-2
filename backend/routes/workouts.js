@@ -1,13 +1,17 @@
 const express = require('express');
 
+// importing all functions from controllers 
+const {
+    createWorkout,
+    getAllWorkouts,
+    getSingleWorkout } = require('../controllers/workoutControllers');
+
+
 //creates an instance of the router
 const router = express.Router();
 
-
-// importing all functions from controllers 
-const { createWorkout, getAllWorkouts, getSingleWorkout } = require('../controllers/workoutControllers');
-
 //routes
+
 //Route to get all workouts
 router.get('/', getAllWorkouts);
 

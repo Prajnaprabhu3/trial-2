@@ -33,10 +33,3 @@ mongoose.connect(process.env.MONGO_URI)
     .catch((error) => {
         console.log(error)
     })
-
-// to react to request we are setting up routes
-// app.get('/', (request, response) => {
-//     response.json({ message: "Welcome to my app" })
-// })
-
-
