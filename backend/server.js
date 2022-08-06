@@ -1,11 +1,11 @@
-require('dotenv').config();
+require('dotenv').config()
 
-const express = require('express');
-const mongoose = require('mongoose');
-const workoutRoutes = require('./routes/workouts');
+const express = require('express')
+const mongoose = require('mongoose')
+const workoutRoutes = require('./routes/workouts')
 
 //creating an express app
-const app = express();
+const app = express()
 
 // middleware 
 app.use(express.json())
@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         // listen to a certain port number / listen for request on a certain port
         app.listen(process.env.PORT, () => {
-            console.log(`Server running on port: http://localhost:${process.env.PORT}`);
+            console.log(`Server running on port: http://localhost:${process.env.PORT}`)
         })
 
     })
